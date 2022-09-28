@@ -19,12 +19,6 @@ export default function IoTDetails() {
           <Text py={2} textAlign='justify'>
             Wearable: são equipamentos “vestíveis”, ou seja, acessórios que utilizamos no corpo, como os smartwatches e fones de ouvido.
           </Text>
-          <Text py={2} textAlign='justify'>
-            Saúde: a tecnologia ajuda na integração com o prontuário do paciente. Com isso, alterações no estado clínico, como alteração na pressão sanguínea e frequência cardíaca, são rapidamente atualizadas no registro, otimizando o atendimento médico.
-          </Text>
-          <Text py={2} textAlign='justify'>
-            Agricultura: os sensores IoT ajudam no monitoramento da temperatura, umidade do solo e do ar, ativando automaticamente os sistemas de irrigação, quando necessário.
-          </Text>
         </ScrollView>
       </VStack> 
     </Box>

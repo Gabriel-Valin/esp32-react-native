@@ -11,7 +11,7 @@ export default function Home() {
           <BoxIcon route='ESP32' icon='http://domoticx.com/wp-content/uploads/2016/12/ESP32-chip-icon.png' title="ESP32 WROOM"/>
         </HStack>
         <HStack space='4'>
-          <BoxIcon route='' icon='https://www.iconpacks.net/icons/1/free-idea-bulb-icon-1202-thumb.png' title="Ideia" />
+          <BoxIcon route='Idea' icon='https://www.iconpacks.net/icons/1/free-idea-bulb-icon-1202-thumb.png' title="Ideia" />
           <BoxIcon route='Dev' icon='https://images-na.ssl-images-amazon.com/images/I/411Mxd+TwPL.png' title="Desenvolvedor" />
         </HStack>
         <HStack space='4'>

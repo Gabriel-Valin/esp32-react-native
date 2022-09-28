@@ -7,6 +7,7 @@ import {
 } from 'firebase/database';
 import { initializeApp } from 'firebase/app';
 import { getDatabase } from 'firebase/database';
+import { getConfigFibrease } from "../utils/getConfigFirebase";
 
 export default function RGB() {
   const convertHexToRGB = (hex: string) => {
@@ -15,28 +16,9 @@ export default function RGB() {
     const end = parseInt(hex[5] + hex[6], 16)
     return [start, middle, end]
   }
-
-  const configFirebase = {
-
-    apiKey: "AIzaSyDWforVXPxPfd2cxKh78HV04eQjgrKKT9I",
-
-    authDomain: "iot-fatec.firebaseapp.com",
-
-    databaseURL: "https://iot-fatec-default-rtdb.firebaseio.com",
-
-    projectId: "iot-fatec",
-
-    storageBucket: "iot-fatec.appspot.com",
-
-    messagingSenderId: "1027999750764",
-
-    appId: "1:1027999750764:web:7f491be9adcd14420e5649"
-
-  }
-
-  const app = initializeApp(configFirebase);
-  const database = getDatabase(app);
   const [rgb, setRgb] = useState<number[]>([0, 153, 255])
+  const app = initializeApp(getConfigFibrease());
+  const database = getDatabase(app);
 
   const sendColors = (color: string) => {
     setRgb(convertHexToRGB(color))

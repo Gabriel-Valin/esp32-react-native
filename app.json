@@ -23,7 +23,9 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "permissions": ["READ_CONTACTS", "READ_PHONE_STATE", "RECORD_AUDIO", "CAMERA"],
+      "package": "com.gvt3ch.esp32app"
     },
     "web": {
       "favicon": "./assets/favicon.png"

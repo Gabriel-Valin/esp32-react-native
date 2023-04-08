@@ -1,5 +1,5 @@
-import { Box, Text } from "native-base";
-import { Linking } from "react-native";
+import { Text } from "native-base";
+// import { Linking } from "react-native";
 import Profile from "../components/ProfilePage";
 import { rall } from "../utils/profiles";
 

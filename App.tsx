@@ -8,11 +8,12 @@ import Esp32 from "./src/pages/Esp32";
 import Developer from "./src/pages/Developer";
 import Firebase from "./src/pages/Firebase";
 import Functions from "./src/pages/Functions";
-import Led from "./src/pages/Led";
-import RGB from "./src/pages/RGB";
-import Rain from "./src/pages/Rain";
-import WaterLevel from "./src/pages/WaterLevel";
+import Window from "./src/pages/Window";
 import Idea from "./src/pages/Idea";
+import Luminosity from "./src/pages/Luminosity";
+import Light from "./src/pages/Light";
+import Presence from "./src/pages/Presence";
+
 
 const Stack = createNativeStackNavigator();
 
@@ -28,10 +29,10 @@ export default function App() {
           <Stack.Screen name="Idea" options={{ title: 'Ricardo Rall - Professor.' }} component={Idea} />
           <Stack.Screen name="Firebase" options={{ title: 'Config. Firebase' }} component={Firebase} />
           <Stack.Screen name="Functions" options={{ title: 'Funcionalidades' }} component={Functions} />
-          <Stack.Screen name="Led" options={{ title: 'Ligar/Desligar LED' }} component={Led} />
-          <Stack.Screen name="RGB" options={{ title: 'Controlar cor RGB' }} component={RGB} />
-          <Stack.Screen name="RAIN" options={{ title: 'Detecte a Chuva' }} component={Rain} />
-          <Stack.Screen name="WATER_LEVEL" options={{ title: 'Nível de Água' }} component={WaterLevel} />
+          <Stack.Screen name="WINDOW" options={{ title: 'Controle da Janela' }} component={Window} />
+          <Stack.Screen name="LUMINOSITY" options={{ title: 'Sensor de Luminosidade' }} component={Luminosity} />
+          <Stack.Screen name="LIGHT" options={{ title: 'Luzes dos Comodos' }} component={Light} />
+          <Stack.Screen name="PRESENCE" options={{ title: 'Sensor de Presenca' }} component={Presence} />
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>

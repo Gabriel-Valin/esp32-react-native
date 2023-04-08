@@ -1,6 +1,5 @@
-import { Box, HStack, Text, Avatar, Flex, VStack } from "native-base";
+import {  HStack, Flex, VStack } from "native-base";
 import BoxIcon from "../components/BoxIcon";
-import IoTDetails from "./IoTDetails";
 
 export default function Home() {
   return (

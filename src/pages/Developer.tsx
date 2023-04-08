@@ -1,4 +1,4 @@
-import { Box, Text } from "native-base";
+import { Text } from "native-base";
 import { Linking } from "react-native";
 import Profile from "../components/ProfilePage";
 import { valin } from "../utils/profiles";

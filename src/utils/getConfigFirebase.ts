@@ -1,7 +1,8 @@
 import { API_KEY, AUTH_DOMAIN, DATABASE_URL, PROJECT_ID, STORAGE_BUCKET, MESSAGING_SENDER_ID, APP_ID } from '@env'
+import { initializeApp } from "firebase/app"
+import { getDatabase } from 'firebase/database'
 
-export const getConfigFibrease = (): object => {
-  const configFirebase = {
+const configFirebase = {
     apiKey: API_KEY,
     authDomain: AUTH_DOMAIN,
     databaseURL: DATABASE_URL,
@@ -9,7 +10,7 @@ export const getConfigFibrease = (): object => {
     storageBucket: STORAGE_BUCKET,
     messagingSenderId: MESSAGING_SENDER_ID,
     appId: APP_ID
-  }
-
-  return configFirebase
 }
+
+const fbConfig = initializeApp(configFirebase)
+export const db = getDatabase(fbConfig)

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Switch,  Text, Box, VStack, HStack} from 'native-base';
+import { Text, Box, VStack, HStack} from 'native-base';
+import { Switch } from "react-native";
 import { onValue, ref, update } from 'firebase/database';
 import { db } from "../utils/getConfigFirebase";
 import { FirebasePaths } from "../enums/FirebasePathTypes";
@@ -38,7 +39,7 @@ export default function Light() {
   const handleKitchenLightChange = (value: any) => {
     const status = value ? LightStatus.LIGHT_ON : LightStatus.LIGHT_OFF;
     update(ref(db), { 'light/kitchen': status })
-    setRoom(value);
+    setKitchen(value);
     setLoading(true)
     setTimeout(() => setLoading(false), 2000)
   }
@@ -51,7 +52,7 @@ export default function Light() {
           <Text fontSize={18} textAlign="center" fontWeight="bold">Luz da SALA</Text>
           <HStack alignItems="center">
             <Text>Desligada</Text>
-            <Switch m={6} value={room} onValueChange={handleRoomLightChange} />
+            <Switch value={room} onValueChange={handleRoomLightChange} />
             <Text>Ligada</Text>
           </HStack>
         </Box>
@@ -59,7 +60,7 @@ export default function Light() {
           <Text fontSize={18} textAlign="center" fontWeight="bold">Luz da COZINHA</Text>
           <HStack alignItems="center">
             <Text>Desligada</Text>
-            <Switch m={6} value={kitchen} colorScheme="green" onValueChange={handleKitchenLightChange} />
+            <Switch value={kitchen} onValueChange={handleKitchenLightChange} />
             <Text>Ligada</Text>
           </HStack>
         </Box>

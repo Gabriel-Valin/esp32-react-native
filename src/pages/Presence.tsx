@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import { onValue, ref, update } from 'firebase/database';
 import { db } from "../utils/getConfigFirebase";
-import { Switch,  Text, Box, VStack, HStack} from 'native-base';
+import { Text, Box, VStack, HStack} from 'native-base';
+import { Switch } from "react-native";
 import { Loading } from "../components/Loading"
 import { PresenceStatus } from "../enums/SensorTypes";
 import { FirebasePaths } from "../enums/FirebasePathTypes";
@@ -37,7 +38,7 @@ export default function Presence() {
           <Text fontSize={18} textAlign="center" fontWeight="bold">Sensor de Presenca (STATUS)</Text>
           <HStack alignItems="center">
             <Text>Desligado</Text>
-            <Switch m={6} value={presence} onValueChange={handlePresenceChange} />
+            <Switch value={presence} onValueChange={handlePresenceChange} />
             <Text>Ligado</Text>
           </HStack>
         </Box>

@@ -21,7 +21,7 @@ export default function App() {
   return (
     <NativeBaseProvider>
       <NavigationContainer>
-        <Stack.Navigator defaultScreenOptions={{ headerShown: false }} initialRouteName='Home'>
+        <Stack.Navigator initialRouteName='Home'>
           <Stack.Screen name="Home" options={{ title: 'Bem vindo(a)!' }} component={Home} />
           <Stack.Screen name="IotDetails" options={{ title: 'O que é IoT ?' }} component={IoTDetails} />
           <Stack.Screen name="ESP32" options={{ title: 'ESP32 - O melhor' }} component={Esp32} />

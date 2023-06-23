@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { db } from "../utils/getConfigFirebase";
 import { onValue, ref, update } from 'firebase/database';
-import { Switch,  Text, Box, VStack, HStack} from 'native-base';
+import { Text, Box, VStack, HStack} from 'native-base';
+import { Switch } from "react-native";
 import { Loading } from '../components/Loading';
 import { WindowSensor } from '../enums/SensorTypes';
 import { FirebasePaths } from '../enums/FirebasePathTypes';
@@ -50,7 +51,7 @@ export default function Window() {
           <Text fontSize={18} textAlign="center" fontWeight="bold">Desligue ou Ligue o modo automatico da janela</Text>
           <HStack alignItems="center">
             <Text>Desligado</Text>
-            <Switch m={6} value={windowAutomatic} onValueChange={handleWindowAutomaticChange} />
+            <Switch value={windowAutomatic} onValueChange={handleWindowAutomaticChange} />
             <Text>Ligado</Text>
           </HStack>
         </Box>
@@ -58,7 +59,7 @@ export default function Window() {
           <Text fontSize={18} textAlign="center" fontWeight="bold">Abra e feche a janela manualmente</Text>
           <HStack alignItems="center">
             <Text>Fechada</Text>
-            <Switch m={6} value={command} colorScheme="green" onValueChange={handleCommandChange} />
+            <Switch value={command} onValueChange={handleCommandChange} />
             <Text>Aberta</Text>
           </HStack>
         </Box>}

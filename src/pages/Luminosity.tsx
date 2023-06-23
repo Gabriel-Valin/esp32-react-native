@@ -1,4 +1,5 @@
-import { Switch, Text, Box, VStack, HStack} from 'native-base';
+import { Text, Box, VStack, HStack} from 'native-base';
+import { Switch } from "react-native";
 import { db } from "../utils/getConfigFirebase";
 import { onValue, ref, update } from 'firebase/database';
 import { LDRSensor } from '../enums/SensorTypes';
@@ -44,11 +45,11 @@ export default function Luminosity() {
     <>
       {!loading && <Box flex={1} alignItems="center" justifyContent="center" p={8}>
     <VStack space={4}>
-      <Box alignItems="center" bgColor="yellow.100" p={8} shadow="8" borderRadius={10}>
+     <Box alignItems="center" bgColor="yellow.100" p={8} shadow="8" borderRadius={10}>
         <Text fontSize={18} textAlign="center" fontWeight="bold">Ative o sensor de luminosidade</Text>
         <HStack alignItems="center">
           <Text>Desligado</Text>
-          <Switch m={6} value={ldr} onValueChange={handleLDRSensorChange} />
+          <Switch value={ldr} onValueChange={handleLDRSensorChange} />
           <Text>Ligado</Text>
         </HStack>
       </Box>
@@ -56,7 +57,7 @@ export default function Luminosity() {
         <Text fontSize={18} textAlign="center" fontWeight="bold">Ligue e desligue a lampada da varanda</Text>
         <HStack alignItems="center">
           <Text>Desligada</Text>
-          <Switch m={6} value={command} onValueChange={handleLDRCommandChange} />
+          <Switch value={command} onValueChange={handleLDRCommandChange} />
           <Text>Ligada</Text>
         </HStack>
       </Box> }
